@@ -3508,15 +3508,15 @@ input, select, textarea {
 			#footer {
 				padding: 2em 1em 2em 1em ;
 			}
+			#header h1 a#home-link {
+				color: inherit;
+				text-decoration: none;
+				border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
+			}
 
+			#header h1 a#home-link:hover {
+ 				border-bottom: 1px solid rgba(255, 255, 255, 0.85);
+			}
 	}
 
-#header h1 a#home-link {
-  color: inherit;
-  text-decoration: none;
-  border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
-}
 
-#header h1 a#home-link:hover {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.85);
-}
