@@ -3517,68 +3517,9 @@ input, select, textarea {
 			#header h1 a#home-link:hover {
  				border-bottom: 1px solid rgba(255, 255, 255, 0.85);
 			}
+		#footer {
+		    clear: both;
+		    width: 100%;
+		    display: block;
+		}
 	
-	/* KOMPLETT NEUE Button-Layout Regeln - ohne Float! */
-	.actions.special {
-	    display: flex;
-	    flex-wrap: wrap;
-	    justify-content: center;
-	    align-items: center;
-	    gap: 2%;
-	    width: 100%;
-	}
-	
-	.actions.special li.half {
-	    width: 48%;
-	    flex: 0 0 48%;
-	    margin: 0;
-	    box-sizing: border-box;
-	}
-	
-	.actions.special li.half a.button {
-	    width: 100%;
-	    display: block;
-	    box-sizing: border-box;
-	}
-	
-	/* Footer Stabilisierung */
-	#footer {
-	    clear: both;
-	    width: 100%;
-	    display: block;
-	    position: relative;
-	    z-index: 1;
-	}
-	
-	/* Clearfix für alle Sections */
-	section:after,
-	.main:after {
-	    content: "";
-	    display: table;
-	    clear: both;
-	}
-	
-	/* Responsive Verhalten */
-	@media screen and (max-width: 480px) {
-	    .actions.special {
-	        flex-direction: column;
-	        gap: 1em;
-	    }
-	    
-	    .actions.special li.half {
-	        width: 100%;
-	        flex: 0 0 100%;
-	    }
-	}
-	/* Responsive Verhalten für mobile Geräte */
-	@media screen and (max-width: 480px) {
-	    .actions.special li.half {
-	        width: 100%;
-	        margin: 0.5em 0;
-	        flex: 0 0 100%;
-	    }
-	    
-	    .actions.special li.half:first-child {
-	        margin-right: 0;
-	    }
-	}
