@@ -3544,4 +3544,6 @@ input, select, textarea {
 	.actions.special li.half:first-child {
 	    margin-right: 4%;
 	}
-
+	#footer {
+	    clear: both;
+	}
