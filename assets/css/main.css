@@ -3522,4 +3522,66 @@ input, select, textarea {
 		    width: 100%;
 		    display: block;
 		}
-	
+/* Komplette Zurücksetzung aller problematischen Regeln */
+.actions.special li.half,
+.actions.special li {
+    float: none !important;
+    display: block !important;
+    width: auto !important;
+    margin: 0 0.5em !important;
+}
+
+/* Footer absolut sicherstellen */
+#footer {
+    clear: both !important;
+    width: 100% !important;
+    display: block !important;
+    position: relative !important;
+    margin-top: 2em !important;
+}
+
+/* Section drei explizit clearen */
+#three {
+    overflow: hidden !important;
+}
+
+#three::after {
+    content: "" !important;
+    display: table !important;
+    clear: both !important;
+}
+
+/* Actions special neu definieren */
+.actions.special {
+    display: flex !important;
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+    gap: 1em !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.actions.special li {
+    list-style: none !important;
+    flex: 0 1 auto !important;
+    max-width: 200px !important;
+}
+
+.actions.special li a.button {
+    width: 100% !important;
+    display: block !important;
+}
+
+/* Responsive Sicherheit */
+@media screen and (max-width: 768px) {
+    .actions.special {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    
+    .actions.special li {
+        width: 100% !important;
+        max-width: 300px !important;
+        margin: 0.5em 0 !important;
+    }
+}	
