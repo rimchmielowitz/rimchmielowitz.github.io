@@ -3517,33 +3517,56 @@ input, select, textarea {
 			#header h1 a#home-link:hover {
  				border-bottom: 1px solid rgba(255, 255, 255, 0.85);
 			}
+	/* Zwei halbe Buttons nebeneinander - mit Flexbox statt Float */
+	.actions.special {
+	    display: flex;
+	    flex-wrap: wrap;
+	    justify-content: center;
+	    align-items: center;
 	}
-	/* Zwei halbe Buttons nebeneinander */
+	
 	.actions.special li.half {
-		width: 48%;
-		display: inline-block;
-		margin: 0 1%;
+	    width: 48%;
+	    margin: 0 1%;
+	    flex: 0 0 48%;
 	}
+	
 	.actions.special li.half a.button {
-		width: 100%;
+	    width: 100%;
+	    display: block;
 	}
-	/* Verhindert, dass der Footer nach unten verschoben wird */
+	
+	/* Clearfix für alle actions.special Container */
 	.actions.special::after {
 	    content: "";
 	    display: table;
 	    clear: both;
 	}
 	
-	/* Stellt sicher, dass die halben Buttons korrekt nebeneinander angezeigt werden */
-	.actions.special li.half {
-	    float: left;
-	    box-sizing: border-box;
-	}
-	
-	/* Optional: Abstand zwischen den Buttons reduzieren */
-	.actions.special li.half:first-child {
-	    margin-right: 4%;
-	}
+	/* Footer Fixes */
 	#footer {
 	    clear: both;
+	    width: 100%;
+	    display: block;
+	    position: relative;
+	}
+	
+	/* Zusätzlicher Fix: Stellen Sie sicher, dass der Main-Container korrekt cleared wird */
+	.main:after {
+	    content: "";
+	    display: table;
+	    clear: both;
+	}
+	
+	/* Responsive Verhalten für mobile Geräte */
+	@media screen and (max-width: 480px) {
+	    .actions.special li.half {
+	        width: 100%;
+	        margin: 0.5em 0;
+	        flex: 0 0 100%;
+	    }
+	    
+	    .actions.special li.half:first-child {
+	        margin-right: 0;
+	    }
 	}
