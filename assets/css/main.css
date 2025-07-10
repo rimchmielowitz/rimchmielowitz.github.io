@@ -3527,4 +3527,21 @@ input, select, textarea {
 	.actions.special li.half a.button {
 		width: 100%;
 	}
+	/* Verhindert, dass der Footer nach unten verschoben wird */
+	.actions.special::after {
+	    content: "";
+	    display: table;
+	    clear: both;
+	}
+	
+	/* Stellt sicher, dass die halben Buttons korrekt nebeneinander angezeigt werden */
+	.actions.special li.half {
+	    float: left;
+	    box-sizing: border-box;
+	}
+	
+	/* Optional: Abstand zwischen den Buttons reduzieren */
+	.actions.special li.half:first-child {
+	    margin-right: 4%;
+	}
 
