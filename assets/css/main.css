@@ -3518,5 +3518,13 @@ input, select, textarea {
  				border-bottom: 1px solid rgba(255, 255, 255, 0.85);
 			}
 	}
-
+	/* Zwei halbe Buttons nebeneinander */
+	.actions.special li.half {
+		width: 48%;
+		display: inline-block;
+		margin: 0 1%;
+	}
+	.actions.special li.half a.button {
+		width: 100%;
+	}
 
